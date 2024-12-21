@@ -6,7 +6,7 @@
     import './app.scss'
 </script>
 
-<header class="fixed top-0 z-2" in:fly={{y: -100, duration: 1000}}>
+<header in:fly={{y: -100, duration: 1000}}>
     <Header />
 </header>
 <main class='z-1'>
@@ -17,6 +17,10 @@
 </div>
 
 <style lang='scss'>
+    header {
+        @apply fixed top-0 z-2;
+    }
+
     main {
         @apply flex justify-center items-center min-h-[88vh] max-w-[98vw] w-[98vw] overflow-hidden;
     }
