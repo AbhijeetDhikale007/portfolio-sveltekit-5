@@ -5,7 +5,7 @@
     import Profile from './Profile.svelte';
 </script>
 
-<div class="Home flex items-center px-5" in:fly={{y: 100, duration: 1000}}>
+<div class="Home" in:fly={{y: 100, duration: 1000}}>
     <div>
         <h1>Hi,</h1>
         <h1>I'm Abhijeet Dhikale</h1>
@@ -27,9 +27,9 @@
 <style lang="scss">
     .Home {
         // border: 2px solid #fff;
-        @apply flex md:flex flex-col items-center justify-center;
+        @apply flex md:flex flex-col items-center justify-center px-5;
         @apply lg:flex-row lg:justify-between xl:flex-row xl:justify-between 2xl:flex-row 2xl:justify-between;
-        @apply w-[74vw] md:w-[58vw] lg:w-[60vw] pointer-events-none;
+        @apply w-[74vw] h-[100vh] md:w-[58vw] lg:w-[60vw] pointer-events-none;
 
         h1 {
             @apply text-10 md:text-12 lg:text-16 font-bold;
