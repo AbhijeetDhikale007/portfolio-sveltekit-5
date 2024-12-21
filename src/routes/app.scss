@@ -25,16 +25,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-#app {
-  margin: 0;
-  padding: 0;
-  // display: flex;
-  place-items: center;
-  // justify-content: center;
-  min-height: 100vh;
-  max-width: 100vw;
-  @apply flex justify-center overflow-hidden;
-}
+// #app {
+//   margin: 0;
+//   padding: 0;
+//   // display: flex;
+//   place-items: center;
+//   // justify-content: center;
+//   min-height: 100vh;
+//   max-width: 100vw;
+//   @apply flex justify-center overflow-x-hidden;
+// }
 
 ::-moz-selection {
   color: #fff;
