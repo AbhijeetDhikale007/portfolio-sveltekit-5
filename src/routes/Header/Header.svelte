@@ -1,7 +1,7 @@
 <script lang="ts">
     import './Menu.scss'
-    import { Home, SkillsPage, Skills, Projects, Education, Resume } from "../../routes/index.js"
-    import { Main, PageSkill } from "../../store/Store.js"
+    import { Home, SkillsPage, Skills, Projects, Education, Resume } from "$routes"
+    import { Main, PageSkill } from "$store"
 
     let isOpen: boolean = false
 

@@ -1,8 +1,8 @@
 <script lang='ts'>
     import VanillaTilt from "vanilla-tilt";
     import { onMount } from "svelte";
-    import { PageSkill, SkillInfo } from "../../../../store/Store.js"
-    import SkillsInfo from "../../../../routes/Skills/Pages/SkillsInfo.svelte";
+    import { PageSkill, SkillInfo } from '$store'
+    import SkillsInfo from '$routes'
 
     function UpdateSkillPage(Page: any) {
         $PageSkill = SkillsInfo

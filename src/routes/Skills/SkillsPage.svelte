@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import { PageSkill } from '../../store/Store.js'
+    import { PageSkill } from '$store'
     import Skills from './Skills.svelte'
 
     $PageSkill = Skills

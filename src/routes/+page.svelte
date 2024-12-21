@@ -1,8 +1,8 @@
 <script lang="ts">
     import { fly } from "svelte/transition";
-    import { Header } from "./index.js"
-    import { Main } from "../store/Store.js";
-
+    import { Header } from "$routes"
+    import { Main } from "$store";
+    
     import './app.scss'
 </script>
 
