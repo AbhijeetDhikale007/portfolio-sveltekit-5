@@ -19,6 +19,9 @@
         <!-- <div>{@html HTMLIcon}</div>
         <div>{@html CSS}</div> -->
     <!-- </div> -->
+    <div class='Status'>
+        <h4>Under Development</h4>
+    </div>
 </div>
 
 <style lang="scss">
@@ -44,5 +47,9 @@
         .Buttons-Container {
             @apply flex gap-2 py-8 items-center select-none;
         }
+    }
+
+    .Status {
+        @apply absolute bottom-2 left-4;
     }
 </style>
