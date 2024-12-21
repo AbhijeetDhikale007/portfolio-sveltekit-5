@@ -36,7 +36,7 @@
     }
 </script>
 
-<div class='z-4'>
+<div class='z-4 Header-Wrapper'>
     <div class="Header">
         <div class="HeaderDiv">
             <!-- <img
@@ -97,6 +97,10 @@
 </div>
 
 <style lang="scss">
+    .Header-Wrapper {
+        @apply overflow-hidden max-w-[100vw];
+    }
+
     .Header {
         // width: 85vw;
         // height: fit-content;
