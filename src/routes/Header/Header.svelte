@@ -97,10 +97,6 @@
 </div>
 
 <style lang="scss">
-    .Header-Wrapper {
-        @apply overflow-hidden max-w-[100vw];
-    }
-
     .Header {
         // width: 85vw;
         // height: fit-content;

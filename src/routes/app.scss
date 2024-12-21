@@ -32,8 +32,8 @@
   place-items: center;
   // justify-content: center;
   min-height: 100vh;
-  max-width: 99vw;
-  @apply flex justify-center;
+  max-width: 100vw;
+  @apply flex justify-center overflow-hidden;
 }
 
 ::-moz-selection {
