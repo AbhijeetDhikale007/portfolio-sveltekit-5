@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import HR from "./HR.svelte";
+    import HR from './HR.svelte'
     export let HRName:String
 </script>
 

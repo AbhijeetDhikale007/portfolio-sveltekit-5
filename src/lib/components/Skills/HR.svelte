@@ -5,13 +5,13 @@
 <div class="HR">
     <div class="container">
         <div>
-            <hr class="w-5" />
+            <hr class='hr1' />
         </div>
         <div>
             <pre>{HRname}</pre>
         </div>
         <div>
-            <hr class="w-300" />
+            <hr class="hr2" />
         </div>
     </div>
 </div>
@@ -30,6 +30,14 @@
         hr {
             border: 0;
             border-bottom: 0.2px solid rgb(140, 140, 140, 0.6);
+        }
+
+        .hr1 {
+            @apply w-5;
+        }
+
+        .hr2 {
+            @apply w-screen;
         }
 
         pre {
