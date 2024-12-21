@@ -1,6 +1,6 @@
 <script lang='ts'>
     import { PageSkill } from "$store"
-    import Skills from "../Skills.svelte"
+    import Skills from "$routes"
 
     function Back(){
         $PageSkill = Skills
