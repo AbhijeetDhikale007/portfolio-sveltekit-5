@@ -44,3 +44,9 @@
         </div>
     </CardDiv>
 </div>
+
+<style lang='scss'>
+    .Skills {
+        @apply xl:max-w-[85vw] 2xl:max-w-[82vw];
+    }
+</style>
