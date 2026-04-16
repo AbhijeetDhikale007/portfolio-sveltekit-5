@@ -13,11 +13,11 @@
 		</h1>
 
 		<Typewriter
-			phrases={['Full Stack Developer', 'Svelte Enthusiast', 'UI/UX Designer', 'Problem Solver']}
+			phrases={['Full Stack Developer', 'Svelte Enthusiast', 'Tech Enthusiast', 'Coder...']}
 		/>
 
 		<div
-			class="mt-10 md:mt-8 backdrop-blur-md bg-white/50 dark:bg-black/40 p-4 md:p-5 rounded-3xl border border-black/10 dark:border-white/10 shadow-2xl transition-colors duration-500"
+			class="mt-10 md:mt-8 backdrop-blur-md bg-white/50 dark:bg-black/40 p-4 md:p-5 rounded-3xl border border-black/10 dark:border-white/10 shadow-2xl dark:shadow-white/25 transition-colors duration-500"
 		>
 			<HomeIcons />
 		</div>
