@@ -19,7 +19,7 @@
 
 html,
 body {
-    @apply bg-black text-white max-w-[100vw] overflow-x-hidden;
+    @apply dark:bg-black bg-white text-black dark:text-white max-w-[100vw] overflow-x-hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -29,6 +29,10 @@ a {
 
 .dark {
     @apply bg-black text-white;
+}
+
+.light {
+    @apply bg-white text-black;
 }
 
 /* Lenis smooth scrolling classes */
