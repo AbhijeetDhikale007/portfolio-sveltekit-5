@@ -12,15 +12,15 @@
 
 <div class="flex gap-2 rounded-8 overflow-hidden">
 	{#each SocialLinks as link}
-		<div class="bg-white h-10 rounded-2 p-2">
+		<div class="bg-black dark:bg-white h-10 rounded-2 p-2">
 			<a
 				href={link.href}
-				class="Tooltip invert"
+				class="Tooltip dark:invert"
 				data-title={link.name}
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<Ico class="Ico" name={link.name} />
+				<Ico name={link.name} />
 			</a>
 		</div>
 	{/each}
