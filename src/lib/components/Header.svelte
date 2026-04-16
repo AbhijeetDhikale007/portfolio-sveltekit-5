@@ -19,23 +19,23 @@
 </script>
 
 <header
-	class="static flex justify-center top-0 left-0 w-[100vw] z-4 border-b-[0.1px] border-white/20"
+	class="static flex justify-center top-0 left-0 w-[100vw] z-4 border-b-[0.1px] border-white/45"
 	in:fly={{ y: -100, duration: 1000 }}
 >
 	<div
-		class="Header flex items-center justify-between w-[85vw] h-16 lg:h-20 bg-black/40 backdrop-blur-[12px]"
+		class="Header flex items-center justify-between w-[87vw] h-10 lg:h-15 bg-black/40 backdrop-blur-[12px]"
 	>
 		<a
 			href="/"
 			class="flex items-center gap-4 no-underline group rounded-xl border-[0.1px] border-white/35 overflow-hidden"
 		>
 			<div
-				class="flex items-center justify-center bg-white text-black w-10 h-10 lg:w-12 lg:h-12 text-2xl lg:text-3xl font-bold transition-transform group-hover:scale-105 active:scale-95"
+				class="flex items-center justify-center bg-white text-black w-10 h-10 lg:w-12 lg:h-12 text-2xl lg:text-3xl font-bold transition-transform group-hover:scale-105 active:scale-95 select-none"
 			>
 				Λ
 			</div>
 			<span
-				class="tracking-[2px] mr-4 text-white font-Roboto-Condensed text-lg lg:text-xl xl:text-xl transition-opacity group-hover:opacity-100"
+				class="tracking-[2px] mr-4 text-white font-Roboto-Condensed text-lg lg:text-xl xl:text-xl transition-opacity group-hover:opacity-100 select-none"
 			>
 				Λʙʜιנєєτ Ðʜικαℓє
 			</span>
@@ -78,7 +78,7 @@
 			<div class="hidden lg:flex items-center gap-2">
 				{#each MenuItems as item}
 					<a
-						class="px-4 py-2 rounded-2 text-sm font-medium transition-all ease-in-out duration-[500ms] text-white hover:text-black hover:bg-white"
+						class="px-4 py-2 rounded-2 text-3.6 font-medium transition-all ease-in-out duration-[500ms] text-white hover:text-black hover:bg-white select-none"
 						href={item.href}>{item.name}</a
 					>
 				{/each}
