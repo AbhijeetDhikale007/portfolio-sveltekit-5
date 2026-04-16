@@ -22,35 +22,36 @@
 </script>
 
 <header
-	class="static flex justify-center top-0 left-0 w-[100vw] z-4 border-b-[0.1px] border-white/45"
+	class="fixed flex justify-center top-0 left-0 w-[100vw] z-4 border-b-[0.1px] border-black/45 dark:border-white/45 bg-white dark:bg-black"
 	in:fly={{ y: -100, duration: 1000 }}
 >
-	<div
-		class="Header flex items-center justify-between w-[87vw] h-10 lg:h-15 bg-black/40 backdrop-blur-[12px]"
-	>
+	<div class="flex items-center justify-between w-[87vw] h-10 lg:h-15">
 		<a
 			href="/"
 			class="flex items-center gap-4 no-underline group rounded-xl border-[0.1px] border-white/35 overflow-hidden"
 		>
 			<div
-				class="flex items-center justify-center bg-white text-black w-10 h-10 lg:w-12 lg:h-12 text-2xl lg:text-3xl font-bold transition-transform group-hover:scale-105 active:scale-95 select-none"
+				class="flex items-center justify-center bg-black dark:bg-white text-white dark:text-black w-10 h-10 lg:w-12 lg:h-12 text-2xl lg:text-3xl font-bold transition-transform group-hover:scale-105 active:scale-95 select-none"
 			>
 				Λ
 			</div>
 			<span
-				class="tracking-[2px] mr-4 text-white font-Roboto-Condensed text-lg lg:text-xl xl:text-xl transition-opacity group-hover:opacity-100 select-none"
+				class="tracking-[2px] mr-4 text-black dark:text-white font-Roboto-Condensed text-lg lg:text-xl xl:text-xl transition-opacity group-hover:opacity-100 select-none"
 			>
 				Λʙʜιנєєτ Ðʜικαℓє
 			</span>
 		</a>
 		<nav class="flex items-center">
 			<div class="lg:hidden flex items-center gap-4">
-				<button 
+				<button
 					class="flex items-center justify-center w-10 h-10 rounded-xl bg-white/10 text-white transition-all hover:bg-white hover:text-black focus:outline-none"
 					onclick={() => theme?.toggle()}
 					aria-label="Toggle Theme"
 				>
-					<Ico class="w-5 h-5 flex-shrink-0 opacity-80" name={theme?.mode === 'light' ? 'Sun' : 'Moon'} />
+					<Ico
+						class="w-5 h-5 flex-shrink-0 opacity-80"
+						name={theme?.mode === 'light' ? 'Sun' : 'Moon'}
+					/>
 				</button>
 				<button
 					class="flex justify-center items-center w-10 h-10 border-none bg-white text-black rounded-xl transition-all hover:invert hover:text-black"
@@ -88,16 +89,19 @@
 			<div class="hidden lg:flex items-center gap-2">
 				{#each MenuItems as item}
 					<a
-						class="px-4 py-2 rounded-2 text-3.6 font-medium transition-all ease-in-out duration-[500ms] text-white hover:text-black hover:bg-white select-none dark:text-white dark:hover:text-black"
+						class="px-4 py-2 rounded-2 text-3.6 font-medium transition-all ease-in-out duration-[500ms] select-none text-black dark:text-white hover:text-white hover:bg-black dark:text-white dark:hover:bg-white dark:hover:text-black"
 						href={item.href}>{item.name}</a
 					>
 				{/each}
-				<button 
-					class="flex items-center justify-center w-10 h-10 rounded-xl ml-2 bg-white/10 text-white hover:bg-white hover:text-black transition-colors focus:outline-none"
+				<button
+					class="flex items-center justify-center w-10 h-10 rounded-xl ml-2 bg-black/90 dark:bg-white text-white dark:text-black hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-colors focus:outline-none"
 					onclick={() => theme?.toggle()}
 					aria-label="Toggle Theme"
 				>
-					<Ico class="w-5 h-5 opacity-90 group-hover:opacity-100" name={theme?.mode === 'light' ? 'Sun' : 'Moon'} />
+					<Ico
+						class="w-5 h-5 opacity-90 group-hover:opacity-100"
+						name={theme?.mode === 'light' ? 'Sun' : 'Moon'}
+					/>
 				</button>
 			</div>
 		</nav>
