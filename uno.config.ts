@@ -19,7 +19,7 @@ export default defineConfig({
         }
     },
     presets: [
-        presetWind4(),
+        presetWind4({ dark: 'class' }),
         presetAttributify(),
         presetIcons(),
         presetTypography(),
