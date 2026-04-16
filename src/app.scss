@@ -13,13 +13,22 @@
     font-family: 'Arsenal SC', sans-serif;
 }
 
+.font-Roboto {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 html,
 body {
+    @apply bg-black text-white;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
     text-decoration: none;
+}
+
+.dark {
+    @apply bg-black text-white;
 }
 
 /* Lenis smooth scrolling classes */
