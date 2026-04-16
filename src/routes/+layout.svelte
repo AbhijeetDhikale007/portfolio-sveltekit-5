@@ -3,7 +3,12 @@
 	import Header from '$components/Header.svelte';
 	import '../app.scss';
 	import 'virtual:uno.css';
+	import { setTheme, createThemeState } from '$lib/theme.svelte';
+
 	let { children } = $props();
+
+	const theme = createThemeState();
+	setTheme(theme);
 </script>
 
 <svelte:head>
