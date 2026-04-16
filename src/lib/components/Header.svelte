@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 	import Ico from '$components/Ico.svelte';
+	import { getTheme } from '$lib/theme.svelte';
+
+	const theme = getTheme();
 
 	const MenuItems = [
 		{ name: 'Home', href: '/' },
@@ -41,7 +44,14 @@
 			</span>
 		</a>
 		<nav class="flex items-center">
-			<div class="lg:hidden">
+			<div class="lg:hidden flex items-center gap-4">
+				<button 
+					class="flex items-center justify-center w-10 h-10 rounded-xl bg-white/10 text-white transition-all hover:bg-white hover:text-black focus:outline-none"
+					onclick={() => theme?.toggle()}
+					aria-label="Toggle Theme"
+				>
+					<Ico class="w-5 h-5 flex-shrink-0 opacity-80" name={theme?.mode === 'light' ? 'Sun' : 'Moon'} />
+				</button>
 				<button
 					class="flex justify-center items-center w-10 h-10 border-none bg-white text-black rounded-xl transition-all hover:invert hover:text-black"
 					onclick={() => MenuHandler()}><Ico class="invert" name="Menu" /></button
@@ -78,10 +88,17 @@
 			<div class="hidden lg:flex items-center gap-2">
 				{#each MenuItems as item}
 					<a
-						class="px-4 py-2 rounded-2 text-3.6 font-medium transition-all ease-in-out duration-[500ms] text-white hover:text-black hover:bg-white select-none"
+						class="px-4 py-2 rounded-2 text-3.6 font-medium transition-all ease-in-out duration-[500ms] text-white hover:text-black hover:bg-white select-none dark:text-white dark:hover:text-black"
 						href={item.href}>{item.name}</a
 					>
 				{/each}
+				<button 
+					class="flex items-center justify-center w-10 h-10 rounded-xl ml-2 bg-white/10 text-white hover:bg-white hover:text-black transition-colors focus:outline-none"
+					onclick={() => theme?.toggle()}
+					aria-label="Toggle Theme"
+				>
+					<Ico class="w-5 h-5 opacity-90 group-hover:opacity-100" name={theme?.mode === 'light' ? 'Sun' : 'Moon'} />
+				</button>
 			</div>
 		</nav>
 	</div>
