@@ -22,41 +22,47 @@
 	}
 </script>
 
-<header class="static top-0 z-4" in:fly={{ y: -100, duration: 1000 }}>
+<header class="fixed top-0 left-0 w-full z-50 px-[4vw] lg:px-[8vw]" in:fly={{ y: -100, duration: 1000 }}>
 	<div class="Header">
-		<div class="ml-[4vw] lg:ml-[8vw] flex pointer-events-none z-1 items-center select-none">
-			<!-- <img
-                class="King pointer-events-none w-16 lg:w-17 inline-block"
-                src="/King.png"
-                alt="King - A Logo"
-            /> -->
-			<h3 class="mr-4 text-black bg-white px-4.8 rounded-3.8 text-8.5 font-bold">Λ</h3>
-			<pre
-				class="tracking-[-1px] inline-block vertical-middle text-white cursor-default font-size-4 lg:font-size-5 xl:text-5.4 2xl:text-5.6 font-Roboto">Λ ʙ ʜ ι נ є є τ   Ð ʜ ι κ α ℓ є</pre>
-		</div>
+		<a href="/" class="flex items-center gap-4 no-underline group">
+			<div class="flex items-center justify-center bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-xl text-2xl lg:text-3xl font-bold transition-transform group-hover:scale-105 active:scale-95">
+				Λ
+			</div>
+			<span class="tracking-[-0.5px] text-white font-Roboto text-lg lg:text-xl xl:text-2xl font-medium opacity-90 transition-opacity group-hover:opacity-100">
+				Λʙʜιנєєτ Ðʜικαℓє
+			</span>
+		</a>
 		<nav>
 			<div class="Menu-Container">
 				<button class="Menu-Button w-10 h-10" onclick={() => MenuHandler()}
 					><Ico class="invert" name="Menu" /></button
 				>
-				{#if isOpen == true}
+				{#if isOpen}
 					<div
-						class="bg-black fixed flex top-14 left-0 justify-center w-screen h-screen backdrop-blur-[12px] animation-MenuAnimation ease-in-out 0.8s;"
+						class="fixed inset-0 top-14 bg-black/80 backdrop-blur-xl z-50 flex flex-col items-center justify-start pt-10"
+						transition:fly={{ y: -20, duration: 400 }}
 					>
-						<div class="Menu">
-							<div class="Menu-Buttons-1">
+						<div class="Menu w-full max-w-sm px-6">
+							<div class="flex flex-col gap-4">
 								{#each MenuItems as item}
-									<a class="Button-Black" href={item.href}>
-										<Ico class="w-6 h-6" name={item.name} />
-										<p>{item.name}</p>
+									<a 
+										class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors border border-white/5 no-underline text-white" 
+										href={item.href}
+										onclick={() => isOpen = false}
+									>
+										<Ico class="w-6 h-6 opacity-70" name={item.name} />
+										<span class="text-xl font-medium">{item.name}</span>
 									</a>
+								{#each item.name === 'Resume' ? [] : [] as _}<!-- placeholder for potential additions -->{/each}
 								{/each}
 							</div>
-							<div class="grid px-3 mt-3">
-								<button class="Menu-Button ml-6 justify-self-end" onclick={() => (isOpen = false)}
-									><Ico class="w-6 h-6 invert" name="Close" /></button
-								>
-							</div>
+							
+							<button 
+								class="mt-10 mx-auto w-14 h-14 flex items-center justify-center bg-white text-black rounded-full hover:scale-110 active:scale-90 transition-transform shadow-xl" 
+								onclick={() => (isOpen = false)}
+							>
+								<Ico class="w-6 h-6" name="Close" />
+							</button>
 						</div>
 					</div>
 				{/if}
@@ -72,54 +78,35 @@
 
 <style lang="scss">
 	.Header {
-		// width: 85vw;
-		// height: fit-content;
-		background-color: rgb(0, 0, 0, 0.6);
-		backdrop-filter: blur(3px);
-		border-bottom: 0.5px solid rgb(255, 255, 255, 0.5);
-		@apply flex flex-items-center flex-justify-between;
-		@apply grow-1 h-14 w-[100vw];
+		@apply flex items-center justify-between w-full h-16 lg:h-20;
+		background-color: rgba(0, 0, 0, 0.4);
+		backdrop-filter: blur(12px);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
 	nav {
-		@apply flex justify-center flex-row pr-[2vw] lg:pr-[6vw];
-		// border: 2px solid #fff;
-
-		.Links {
-			@apply flex gap-4;
-		}
+		@apply flex items-center;
 
 		.Menu-Container {
-			.Menu-Wrapper {
-				background-color: rgb(0, 0, 0);
-				backdrop-filter: blur(12px);
-				@apply fixed flex top-14 left-0 justify-center;
-				@apply w-[100vw] h-[100vh];
-				animation: MenuAnimation ease-in-out 0.8s;
-			}
+			@apply lg:hidden;
+		}
 
-			.Menu {
-				@apply w-[100vw];
-			}
+		.Menu-Buttons-2 {
+			@apply hidden lg:flex items-center gap-2;
+		}
+	}
 
-			@keyframes MenuAnimation {
-				0% {
-					top: -30vh;
-				}
-
-				100% {
-					@apply top-14;
-				}
-			}
+	.Button {
+		@apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-300;
+		@apply text-white/70 hover:text-white hover:bg-white/10;
+		
+		&[href="/resume"] {
+			@apply bg-white text-black hover:bg-white/90 ml-2;
 		}
 	}
 
 	.Menu-Button {
-		@apply flex justify-center items-center border-none bg-white text-black rounded-1.8 p-1.8;
-
-		img {
-			filter: invert(1);
-		}
+		@apply flex justify-center items-center w-10 h-10 border-none bg-white/10 text-white rounded-xl transition-all hover:bg-white hover:text-black;
 	}
 
 	.Menu-Button:hover {
