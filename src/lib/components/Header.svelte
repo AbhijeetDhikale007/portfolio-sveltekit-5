@@ -11,14 +11,10 @@
 		{ name: 'Resume', href: '/resume' }
 	];
 
-	let isOpen: boolean = false;
+	let isOpen = $state(false);
 
 	function MenuHandler() {
-		if (isOpen == false) {
-			isOpen = true;
-		} else {
-			isOpen = false;
-		}
+		isOpen = !isOpen;
 	}
 </script>
 
@@ -44,7 +40,7 @@
 		<nav class="flex items-center">
 			<div class="lg:hidden">
 				<button
-					class="flex justify-center items-center w-10 h-10 border-none bg-white text-black rounded-xl transition-all hover:invert hover:text-black;"
+					class="flex justify-center items-center w-10 h-10 border-none bg-white text-black rounded-xl transition-all hover:invert hover:text-black"
 					onclick={() => MenuHandler()}><Ico class="invert" name="Menu" /></button
 				>
 				{#if isOpen}
@@ -52,8 +48,8 @@
 						class="fixed inset-0 top-14 bg-black/80 backdrop-blur-xl z-50 flex flex-col items-center justify-start pt-10"
 						transition:fly={{ y: -20, duration: 400 }}
 					>
-						<div class="Menu w-full max-w-sm px-6">
-							<div class="flex flex-col gap-4">
+						<div class="bg-black z-10 w-[100vw]">
+							<div class="flex flex-col gap-4 w-[90vw] mx-auto">
 								{#each MenuItems as item}
 									<a
 										class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors border border-white/5 no-underline text-white"
@@ -87,15 +83,3 @@
 		</nav>
 	</div>
 </header>
-
-<style lang="scss">
-	nav {
-		.Menu-Container {
-			@apply lg:hidden;
-		}
-	}
-
-	.Menu-Button:hover {
-		filter: invert(1);
-	}
-</style>
