@@ -28,10 +28,10 @@
 	<div class="flex items-center justify-between w-[87vw] h-10 lg:h-15">
 		<a
 			href="/"
-			class="flex items-center gap-4 no-underline group rounded-xl border-[0.1px] border-white/35 overflow-hidden"
+			class="flex items-center gap-4 no-underline group rounded-xl border-[0.1px] border-black/35 dark:border-white/35 overflow-hidden"
 		>
 			<div
-				class="flex items-center justify-center bg-black dark:bg-white text-white dark:text-black w-10 h-10 lg:w-12 lg:h-12 text-2xl lg:text-3xl font-bold transition-transform group-hover:scale-105 active:scale-95 select-none"
+				class="flex items-center justify-center bg-black hover:bg-white dark:bg-white hover:dark:bg-black text-white hover:text-black dark:text-black dark:hover:text-white w-10 h-10 lg:w-12 lg:h-12 text-2xl lg:text-3xl font-bold transition-transform group-hover:scale-105 active:scale-95 select-none"
 			>
 				Λ
 			</div>
