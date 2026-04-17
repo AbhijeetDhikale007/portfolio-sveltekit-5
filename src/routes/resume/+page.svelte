@@ -43,11 +43,12 @@
 		.Button-white {
 			padding: 8px 14px;
 			transition: 0.5s;
-			@apply bg-white border-none rounded-2 text-4.1 cursor-pointer text-black font-500 no-underline select-none;
+			@apply bg-white border-[0.2px] border-white/45 rounded-2 text-4.1 cursor-pointer text-black font-500 no-underline select-none;
 		}
 
 		.Button-white:hover {
-			scale: 1.2;
+			background: #000;
+			color: #fff;
 		}
 
 		.Button-white:focus {
