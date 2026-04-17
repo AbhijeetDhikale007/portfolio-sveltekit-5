@@ -57,12 +57,12 @@
 		</div>
 		<hr />
 		<div class="flex gap-3 items-center w-full font-medium text-sm">
-			<Ico name="Project" class="h-6 w-6" />
+			<Ico name="Project" class="invert dark:invert-0 h-6 w-6" />
 			<h4>{project.Type}</h4>
 		</div>
 		<hr />
 		<div class="flex gap-3 items-center w-full font-medium text-sm">
-			<Ico name="Time" class="h-6 w-6" />
+			<Ico name="Time" class="invert dark:invert-0 h-6 w-6" />
 			<h4>{project.Duration}</h4>
 		</div>
 		<hr />
@@ -72,14 +72,21 @@
 			</h4>
 		</div>
 		<div class="flex justify-between items-center w-full text-xs font-semibold">
-			<div class="px-3 py-2 border-1 border-white/20 rounded-full"><p>{project.From}</p></div>
-			<div class="px-3 py-2 border-1 border-white/20 rounded-full"><p>{project.To}</p></div>
+			<div class="px-3 py-2 border-1 border-black/25 dark:border-white/20 rounded-full">
+				<p>{project.From}</p>
+			</div>
+			<div class="px-3 py-2 border-1 border-black/25 dark:border-white/20 rounded-full">
+				<p>{project.To}</p>
+			</div>
 		</div>
 		<hr />
 		<div class="flex gap-x-2 items-center justify-start h-[6vh] w-full mt-auto">
 			{#each [project.SVG1, project.SVG2, project.SVG3, project.SVG4, project.SVG5, project.SVG6, project.SVG7, project.SVG8, project.SVG9, project.SVG10].filter( (svg): svg is string => Boolean(svg) ) as svg}
 				<div class="Tooltip" data-title={svg}>
-					<Ico class="border-1 border-white/40 w-8 h-8 p-1.6 rounded-2" name={svg} />
+					<Ico
+						class="border-1 border-black:40 dark:border-white/40 w-8 h-8 p-1.6 rounded-2"
+						name={svg}
+					/>
 				</div>
 			{/each}
 		</div>
