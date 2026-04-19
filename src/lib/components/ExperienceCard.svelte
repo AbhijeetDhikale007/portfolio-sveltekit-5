@@ -16,7 +16,7 @@
 </script>
 
 {#each Experience as card, index}
-<div class="CardEdu self-center rounded-5 grow-1 shrink-1 h-auto w-[80vw] md:w-[38vw] lg:w-[38vw] px-4 py-4 lg:px-6 lg:py-6 bg-white dark:bg-black border-1 border-black/10 dark:border-white/10 {index % 2 === 0 ? 'md:self-start lg:self-start' : 'md:self-end lg:self-end'}" use:tilt={{ max: 15, speed: 400, glare: true, "max-glare": 0.2 }}>
+<div class="CardEdu self-center rounded-5 grow-1 shrink-1 h-auto w-[80vw] md:w-[38vw] lg:w-[38vw] px-4 py-4 lg:px-6 lg:py-6 bg-white dark:bg-black border-1 border-black/10 dark:border-white/10 transition-[transform,shadow,background] duration-300 ease {index % 2 === 0 ? 'md:self-start lg:self-start' : 'md:self-end lg:self-end'}" use:tilt={{ max: 15, speed: 400, glare: true, "max-glare": 0.2 }}>
     <img class='w-20 h-20 object-contain mb-4 bg-dark/85 dark:bg-white/15 rounded-lg p-2' src={card.imgUrl} alt={card.imgAlt} />
     <h2 class='text-xl font-bold text-black dark:text-white mb-1'>{card.Title}</h2>
     <h3 class="pb-2 text-lg text-black/85 dark:text-white/85 font-medium">{card.Company}</h3>
@@ -48,13 +48,8 @@
 
 <style lang="scss">
     .CardEdu {
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-
-        &:hover {
-            // background: rgba(255, 255, 255, 0.03);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
+        box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.1), 0 2px 4px 0px rgba(0, 0, 0, 0.06);
+        @apply dark:shadow-[0_2px_6px_0px_rgba(255,255,255,0.2),0_2px_6px_0px_rgba(255,255,255,0.06)];
 
         .CardDiv {
             @apply flex shrink-0 py-2 lg:py-3 items-center;
