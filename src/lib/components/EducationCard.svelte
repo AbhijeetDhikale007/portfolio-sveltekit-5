@@ -19,105 +19,46 @@
 </script>
 
 {#each Education as card, index}
-<div class={card.CardClass} bind:this={TiltCard[index]}>
-    <img class='Logo' src={card.imgUrl} alt={card.imgAlt} />
-    <h2>{card.Degree}</h2>
-    <h3 class="pb-2">{card.Name}</h3>
-    <hr />
+<div class="CardEdu rounded-3
+h-auto w-[80vw] md:w-[38vw] lg:w-[38vw] px-4 py-2 lg:px-6 lg:py-4
+bg-white dark:bg-black border-1 border-black/10 dark:border-white/10
+ {index % 2 === 0 ? 'md:self-start lg:self-start' : 'md:self-end lg:self-end'}" bind:this={TiltCard[index]}>
+    <img class='w-20 h-20' src={card.imgUrl} alt={card.imgAlt} />
+    <h2 class='text-black dark:text-white'>{card.Degree}</h2>
+    <h3 class="text-black dark:text-white pb-2">{card.Name}</h3>
+    <hr class='dark:invert' />
     <div class="CardDiv">
-        <div class="IconDiv"><Ico name='Location' /></div>
-        <h4>{card.Location}</h4>
+        <div class="IconDiv w-6 h-6 pr-2 text-white invert dark:invert-0"><Ico name='Location' /></div>
+        <h4 class='text-black dark:text-white'>{card.Location}</h4>
     </div>
-    <hr />
+    <hr class='dark:invert' />
     <div class="CardDiv">
-        <div class="IconDiv"><Ico name="Date" /></div>
-        <h4>{card.Date}</h4>
+        <div class="IconDiv w-6 h-6 pr-2 text-white invert dark:invert-0"><Ico name="Date" /></div>
+        <h4 class='text-black dark:text-white'>{card.Date}</h4>
     </div>
-    <hr />
+    <hr class='dark:invert' />
     <div class="CardDiv">
-        <div class="IconDiv"><Ico name='Time' /></div>
-        <h4>{card.Duration}</h4>
+        <div class="IconDiv w-6 h-6 pr-2 text-white invert dark:invert-0"><Ico name='Time' /></div>
+        <h4 class='text-black dark:text-white'>{card.Duration}</h4>
     </div>
-    <hr />
-    <div class="LastDiv">
-        <a class="ButtonCard Tooltip" href={card.CertificateUrl} data-title='Certificate' target='_blank'><Ico name='Certificate' /></a>
+    <hr class='dark:invert' />
+    <div class="flex pt-4 justify-end">
+        <a class="invert rounded-3 transition-colors duration-300 no-underline cursor-pointer w-5 h-5 px-3 py-1.5 Tooltip" href={card.CertificateUrl} data-title='Certificate' target='_blank'><Ico name='Certificate' /></a>
     </div>
 </div>
 {/each}
 
 <style lang="scss">
     .CardEdu {
-        // border: 0.4px solid rgb(255, 255, 255, 0.4);
-        border-radius: 12px;
-        // box-shadow: rgb(38, 57, 77) 0px 10px 20px -10px;
-        // box-shadow: rgba(100, 100, 100, 0.25) 0px 0.0625em 0.0625em, rgba(100, 100, 100, 100.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 10px 2px inset;
-        box-shadow: 0 1px 1px rgba(100,100,100,100.12), 0 0px 2px rgba(100,100,100,100.12);
-        @apply h-auto w-[80vw] md:w-[38vw] lg:w-[38vw] px-4 py-2 lg:px-6 lg:py-4;
+        box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.1), 0 2px 4px 0px rgba(0, 0, 0, 0.06);
+        @apply dark:shadow-[0_2px_6px_0px_rgba(255,255,255,0.2),0_2px_6px_0px_rgba(255,255,255,0.06)];
 
         .CardDiv {
-            // border: 2px solid red;
             @apply flex shrink-1 py-2 lg:py-3 items-center;
         }
 
-        .IconDiv {
-            @apply w-4 h-4 pr-2;
-        }
-
-        .Logo {
-            @apply w-20 h-20;
-        }
-
         hr {
-            border: none;
-            border-bottom: 0.1px solid rgb(255, 255, 255, 0.4);
+            @apply border-none border-b-[.2px] border-black/20 border-b-solid;
         }
-    }
-
-    .CardEdu:hover {
-        background: rgb(100, 100, 100, .2);
-        // box-shadow: -1px -1px 20px rgb(100, 100, 100, .2),
-        //             1px 1px 20px rgb(100, 100, 100, .2);
-    }
-
-    .Card1 {
-        // align-self: start;
-        @apply self-center md:self-start lg:self-start;
-    }
-
-    // .Icon1 {
-    //     @apply absolute w-3 top-50% left-105% text-red;
-    // }
-
-    .Card2 {
-        // align-self: end;
-        @apply self-center md:self-end lg:self-end;
-    }
-
-    .LastDiv {
-        @apply flex pt-4;
-    }
-
-    .ButtonCard {
-        border: .5px solid rgb(255, 255, 255, .4);
-        border-radius: 12px;
-        fill: #fff;
-        transition: 0.5s;
-        text-decoration: none;
-        cursor: pointer;
-        @apply w-5 h-5 px-3 py-1.5;
-    }
-
-    .ButtonCard:hover {
-        // color: #000;
-        // fill: #000;
-        background: rgb(255, 255, 255, .3);
-        box-shadow: 0 0 5px #fff;
-    }
-
-    .ButtonCard:active {
-        background-color: #000;
-        color: #ff0000;
-        fill: #ff0000;
-        box-shadow: none;
     }
 </style>
