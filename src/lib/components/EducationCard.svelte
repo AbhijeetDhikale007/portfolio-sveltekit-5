@@ -42,8 +42,8 @@
         <h4 class='text-black/80 dark:text-white/80'>{card.Duration}</h4>
     </div>
     <hr class='dark:invert' />
-    <div class="flex pt-4 justify-end">
-        <a class="invert rounded-3 transition-colors duration-300 no-underline cursor-pointer w-5 h-5 px-3 py-1.5 Tooltip" href={card.CertificateUrl} data-title='Certificate' target='_blank'><Ico name='Certificate' /></a>
+    <div class="flex mt-4 justify-end">
+        <a class="Tooltip rounded-3 no-underline cursor-pointer w-13 h-10 py-2 flex items-center justify-center transition-all duration-300 ease bg-black/80 dark:bg-white/5 dark:hover:shadow-[0_0_10px_white/30] hover:-translate-y-0.5" href={card.CertificateUrl} data-title='Certificate' target='_blank'><Ico name='Certificate' /></a>
     </div>
 </div>
 {/each}
