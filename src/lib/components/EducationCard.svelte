@@ -21,7 +21,7 @@
 {#each Education as card, index}
 <div class="CardEdu rounded-5 h-auto w-[80vw] md:w-[38vw] lg:w-[38vw] px-4 py-2 lg:px-6 lg:py-4 bg-white dark:bg-black border-1 border-black/10 dark:border-white/10
  {index % 2 === 0 ? 'md:self-start lg:self-start' : 'md:self-end lg:self-end'}" bind:this={TiltCard[index]}>
-    <div class='w-20 h-20 mb-3 p-1 bg-black/20 dark:bg-white/80 rounded-4'>
+    <div class='w-20 h-20 mb-3 p-1 bg-black/20 dark:bg-white/80 shadow-sm shadow-black dark:shadow-white rounded-4'>
         <img src={card.imgUrl} alt={card.imgAlt} />
     </div>
     <h2 class='text-black dark:text-white'>{card.Degree}</h2>
@@ -43,7 +43,7 @@
     </div>
     <hr class='dark:invert' />
     <div class="flex mt-4 justify-end">
-        <a class="Tooltip rounded-3 no-underline cursor-pointer w-13 h-10 py-2 flex items-center justify-center transition-all duration-300 ease bg-black/80 dark:bg-white/5 dark:hover:shadow-[0_0_10px_white/30] hover:-translate-y-0.5" href={card.CertificateUrl} data-title='Certificate' target='_blank'><Ico name='Certificate' /></a>
+        <a class="Tooltip rounded-3 no-underline cursor-pointer w-13 h-10 py-2 flex items-center justify-center transition-all duration-300 ease bg-black dark:invert dark:bg-black dark:hover:shadow-[0_0_10px_white/30] hover:-translate-y-0.5" href={card.CertificateUrl} data-title='Certificate' target='_blank'><Ico name='Certificate' /></a>
     </div>
 </div>
 {/each}
