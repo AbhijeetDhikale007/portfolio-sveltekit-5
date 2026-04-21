@@ -17,7 +17,7 @@
 
 {#each Experience as card, index}
 <div class="CardEdu self-center rounded-5 grow-1 shrink-1 h-auto w-[80vw] md:w-[38vw] lg:w-[38vw] px-4 py-4 lg:px-6 lg:py-6 bg-white dark:bg-black border-1 border-black/10 dark:border-white/10 transition-[transform,shadow,background] duration-300 ease {index % 2 === 0 ? 'md:self-start lg:self-start' : 'md:self-end lg:self-end'}" use:tilt={{ max: 15, speed: 400, glare: true, "max-glare": 0.2 }}>
-    <img class='w-20 h-20 object-contain mb-4 bg-dark/85 dark:bg-white/15 rounded-lg p-2' src={card.imgUrl} alt={card.imgAlt} />
+    <img class='w-20 h-20 object-contain mb-4 bg-dark/85 dark:bg-white/15 shadow-sm shadow-black dark:shadow-white rounded-lg p-2' src={card.imgUrl} alt={card.imgAlt} />
     <h2 class='text-xl font-bold text-black dark:text-white mb-1'>{card.Title}</h2>
     <h3 class="pb-2 text-lg text-black/85 dark:text-white/85 font-medium">{card.Company}</h3>
     <hr class='dark:invert' />
