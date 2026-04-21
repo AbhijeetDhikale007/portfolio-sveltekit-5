@@ -37,7 +37,7 @@
     </div>
     <hr class='dark:invert' />
     <div class="CardDiv flex shrink-1 grow-1 px-3 text-justify">
-        <p class='font-4 text-sm text-black/80 dark:text-white/60 leading-relaxed'>{card.Details}</p>
+        <p class='font-4 text-sm text-black/90 dark:text-white/80 leading-relaxed'>{card.Details}</p>
     </div>
     <hr class='dark:invert' />
     <div class="flex pt-4 justify-end">
