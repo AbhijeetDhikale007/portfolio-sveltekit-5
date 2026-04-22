@@ -6,14 +6,14 @@
     import { SkillCategories } from '$data/Skills';
 </script>
 
-<div class="xl:w-[80vw] 2xl:w-[78vw]" in:fly={{ easing: cubicIn, x: -100, duration: 1200 }}>
+<div class="w-full flex flex-col items-center" in:fly={{ easing: cubicIn, x: -100, duration: 1200 }}>
     <Heading HeadingTitle='Skills' />
 
     {#each SkillCategories as category}
-        <div class='CardDiv flex flex-col justify-center'>
+        <div class='w-[85%] flex flex-col justify-center'>
             <div>
-               <div class="HR px-5 flex items-center justify-center">
-                    <div class="flex items-center overflow-hidden width: 80vw">
+               <div class="HR px-5 flex items-center">
+                    <div class="flex items-center overflow-hidden">
                         <div>
                             <hr class="w-5" />
                         </div>
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container w-fit flex flex-wrap gap-6 justify-center mt-5 mb-13 items-center">
+            <div class="container w-full flex flex-wrap flex-shrink gap-6 mt-5 mb-13 items-center justify-center">
                 {#each category.skills as skill}
                     <Cards {skill} />
                 {/each}
