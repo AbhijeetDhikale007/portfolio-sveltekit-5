@@ -5,6 +5,10 @@
     import Card from '$components/EducationCard.svelte';
 </script>
 
+<svelte:head>
+    <title>Education - Abhijeet Dhikale</title>
+</svelte:head>
+
 <div class='Education flex flex-col gap-y-10 items-center'  in:fly={{ easing: cubicIn, y: 100, duration: 1200 }}>
     <Heading HeadingTitle='Education' />
     <div class='relative flex mt-10 mb-20'>
