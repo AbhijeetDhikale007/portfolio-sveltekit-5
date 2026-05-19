@@ -138,7 +138,8 @@ export let Icons: Type = {
 
     Link: {
         viewBox: '0 0 24 24',
-        svg: `<path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M5.576 13.481a3.5 3.5 0 0 0 4.95 4.95m2.473-7.423a3.5 3.5 0 0 1 0 4.95l-2.475 2.475m-2.475-7.425l-2.475 2.475m12.857-2.957a3.5 3.5 0 1 0-4.95-4.95M11.01 13a3.5 3.5 0 0 1 0-4.95l2.474-2.475M15.958 13l2.475-2.475"/>`
+        svg: `<g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" /></g>
+`
     },
 
     LinkedIn: {
