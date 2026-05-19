@@ -6,6 +6,10 @@
 	let HeadingTitle = $state('Resume');
 </script>
 
+<svelte:head>
+	<title>Resume - Abhijeet Dhikale</title>
+</svelte:head>
+
 <div
 	class="Resume flex flex-col items-center gap-6;"
 	in:fly={{ easing: cubicIn, y: -100, duration: 1200 }}
