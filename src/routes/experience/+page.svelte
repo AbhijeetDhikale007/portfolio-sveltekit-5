@@ -5,6 +5,10 @@
     import Card from '$components/ExperienceCard.svelte';
 </script>
 
+<svelte:head>
+    <title>Experience - Abhijeet Dhikale</title>
+</svelte:head>
+
 <div class='relative flex flex-col mt-5' in:fly={{ easing: cubicIn, y: 100, duration: 1200 }}>
     <Heading HeadingTitle='Experience' />
     <div class='relative flex mt-10 mb-20'>
