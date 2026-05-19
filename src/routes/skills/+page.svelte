@@ -74,6 +74,7 @@
         :global(.Threejs) { filter: drop-shadow(-52px 0 36px #ffffff); }
         :global(.MySQL) { filter: drop-shadow(-52px 0 36px #00738d); }
         :global(.Postman) { filter: drop-shadow(-52px 0 36px #FF6C37); }
+        :global(.Antigravity) { filter: drop-shadow(-52px 0 36px #59ABD5); }
         :global(.VSCode) { filter: drop-shadow(-52px 0 36px #48aef2); }
         :global(.GitHub) { filter: drop-shadow(-52px 0 36px #242938); }
         :global(.Firebase) { filter: drop-shadow(-52px 0 36px #F3695C); }
