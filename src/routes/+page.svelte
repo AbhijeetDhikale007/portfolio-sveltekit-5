@@ -6,6 +6,10 @@
 	import { cubicIn } from 'svelte/easing';
 </script>
 
+<svelte:head>
+	<title>Abhijeet Dhikale | Portfolio</title>
+</svelte:head>
+
 <div
 	class="flex flex-col items-center justify-center min-h-[90vh] w-full pt-26 overflow-x-hidden"
 	in:fly={{ easing: cubicIn, y: 100, duration: 1200 }}
