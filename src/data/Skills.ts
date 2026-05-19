@@ -199,6 +199,14 @@ export const SkillCategories: SkillCategory[] = [
         title: 'Other',
         skills: [
             { 
+                name: 'Antigravity', 
+                slug: 'antigravity',
+                class: 'SVG Antigravity', 
+                SVG: 'Antigravity', 
+                info: 'Antigravity is an AI-powered development environment (IDE) designed to assist developers with coding, debugging, and building applications. It integrates artificial intelligence capabilities directly into the development workflow, enabling developers to work more efficiently and effectively.\n\nAI-Powered Coding Assistance: Antigravity provides intelligent code completion, code generation, and real-time suggestions using advanced AI models. Developers can receive context-aware code snippets, function implementations, and test cases tailored to their current project.\n\nNatural Language Programming: The IDE supports natural language programming, allowing developers to describe desired functionality in plain English. The AI then translates these descriptions into working code, significantly speeding up the development process.\n\nIntegrated Debugging: Antigravity includes powerful debugging tools that leverage AI to identify and fix issues in code. The system can automatically detect anomalies, suggest potential fixes, and provide explanations for complex problems.',
+                url: 'https://antigravity.google'
+            },
+            { 
                 name: 'VSCode', 
                 slug: 'vscode',
                 class: 'SVG VSCode', 
