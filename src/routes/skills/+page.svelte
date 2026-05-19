@@ -6,6 +6,10 @@
     import { SkillCategories } from '$data/Skills';
 </script>
 
+<svelte:head>
+    <title>Skills - Abhijeet Dhikale</title>
+</svelte:head>
+
 <div class="w-full flex flex-col items-center" in:fly={{ easing: cubicIn, x: -100, duration: 1200 }}>
     <Heading HeadingTitle='Skills' />
 
