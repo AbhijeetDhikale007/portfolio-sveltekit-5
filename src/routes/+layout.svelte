@@ -1,5 +1,5 @@
 <script lang="ts">
-	import favicon from '$lib/assets/favicon.svg';
+	import Icon from '$lib/assets/A.png';
 	import Header from '$components/Header.svelte';
 	import '../app.scss';
 	import 'virtual:uno.css';
@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href={Icon} />
 </svelte:head>
 
 <Header />
