@@ -47,10 +47,6 @@
         @apply xl:w-[24vw] xl:min-w-[22vw] xl:max-w-[24vw];
         @apply 2xl:w-88 2xl:min-w-86 2xl:max-w-90 2xl:h-24 2xl:min-h-22;
 
-        p {
-            @apply px-6;
-        }
-
         :global(.SVG) {
             @apply w-fit;
         }
