@@ -5,6 +5,10 @@
 	import CardProject from '$components/CardProjects.svelte';
 </script>
 
+<svelte:head>
+	<title>Projects - Abhijeet Dhikale</title>
+</svelte:head>
+
 <div
 	class="flex flex-col items-center w-[100vw] min-h-[90vh] py-10"
 	in:fly={{ easing: cubicIn, x: 100, duration: 1200 }}
