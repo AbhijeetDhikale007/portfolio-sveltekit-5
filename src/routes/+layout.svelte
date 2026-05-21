@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Icon from '$lib/assets/A.png';
 	import Header from '$components/Header.svelte';
 	import '../app.scss';
 	import 'virtual:uno.css';
 	import { onMount } from 'svelte';
 	import Lenis from 'lenis';
 	import { setTheme, createThemeState } from '$lib/theme.svelte';
+	import { resolve } from '$app/paths';
 
 	let { children } = $props();
 
@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={Icon} />
+	<link rel="icon" href={resolve('A.png')} />
 	<meta
 		name="description"
 		content="Aspiring Software Engineer passionate about building scalable and efficient web applications. Skilled in TypeScript, SvelteKit, and modern web technologies. Committed to continuous learning and creating impactful digital solutions."
