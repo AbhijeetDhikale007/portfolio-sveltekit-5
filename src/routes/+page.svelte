@@ -11,7 +11,7 @@
 </svelte:head>
 
 <div
-	class="flex flex-col items-center justify-center min-h-[90vh] w-full pt-26 overflow-x-hidden"
+	class="absolute z-1 flex flex-col items-center justify-center min-h-[90vh] w-full pt-26 overflow-x-hidden"
 	in:fly={{ easing: cubicIn, y: 100, duration: 1200 }}
 >
 	<div class="flex flex-col items-center justify-center flex-grow w-full px-4 text-center z-10">

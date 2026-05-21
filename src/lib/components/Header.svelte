@@ -59,14 +59,14 @@
 				>
 				{#if isOpen}
 					<div
-						class="fixed inset-0 top-14 bg-black/80 backdrop-blur-xl z-50 flex flex-col items-center justify-start pt-10"
+						class="fixed inset-0 top-14 bg-white dark:bg-black backdrop-blur-xl z-10 flex flex-col items-center justify-start pt-10"
 						transition:fly={{ y: -20, duration: 400 }}
 					>
-						<div class="bg-black z-10 w-[100vw]">
+						<div class="bg-white dark:bg-black z-10 w-[100vw]">
 							<div class="flex flex-col gap-4 w-[90vw] mx-auto">
 								{#each MenuItems as item}
 									<a
-										class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors border border-white/5 no-underline text-white"
+										class="flex items-center gap-4 p-4 rounded-2xl bg-black/5 dark:bg-white/5 hover:bg-white/10 transition-colors border border-white/5 no-underline text-white"
 										href={item.href}
 										onclick={() => (isOpen = false)}
 									>
