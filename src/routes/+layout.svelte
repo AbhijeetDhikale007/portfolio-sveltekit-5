@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={resolve('A.png')} />
+	<link rel="icon" href={resolve('/A.png')} />
 	<meta
 		name="description"
 		content="Aspiring Software Engineer passionate about building scalable and efficient web applications. Skilled in TypeScript, SvelteKit, and modern web technologies. Committed to continuous learning and creating impactful digital solutions."
