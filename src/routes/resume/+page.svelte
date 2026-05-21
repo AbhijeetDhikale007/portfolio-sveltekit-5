@@ -2,6 +2,7 @@
 	import { fly } from 'svelte/transition';
 	import { cubicIn } from 'svelte/easing';
 	import Heading from '$components/Heading.svelte';
+	import { resolve } from "$app/paths";
 
 	let HeadingTitle = $state('Resume');
 </script>
@@ -18,13 +19,13 @@
 	<div class="flex gap-8">
 		<a
 			class="Button-white"
-			href="Documents/Abhijeet-Prakash-Dhikale-Resume.pdf"
+			href={resolve("/Documents/Abhijeet-Prakash-Dhikale-Resume.pdf")}
 			target="_blank"
 			type="file/pdf">View</a
 		>
 		<a
 			class="Button-white"
-			href="Documents/Abhijeet-Prakash-Dhikale-Resume.pdf"
+			href={resolve("/Documents/Abhijeet-Prakash-Dhikale-Resume.pdf")}
 			target="_blank"
 			type="file/pdf"
 			download>Download</a
@@ -35,7 +36,7 @@
 	>
 		<!-- <iframe
 			class="w-full h-full border-none"
-			src="/Documents/Abhijeet-Prakash-Dhikale-Resume.pdf#view=FitH"
+			src={resolve("/Documents/Abhijeet-Prakash-Dhikale-Resume.pdf#view=FitH")}
 			title="Resume PDF"
 			loading="lazy"
 		></iframe> -->
