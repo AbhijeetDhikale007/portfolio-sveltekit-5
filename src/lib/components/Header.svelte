@@ -66,11 +66,11 @@
 							<div class="flex flex-col gap-4 w-[90vw] mx-auto">
 								{#each MenuItems as item}
 									<a
-										class="flex items-center gap-4 p-4 rounded-2xl bg-black/5 dark:bg-white/5 hover:bg-white/10 transition-colors border border-white/5 no-underline text-white"
+										class="flex items-center gap-4 p-4 rounded-2xl bg-black/5 dark:bg-white/5 hover:bg-white/10 transition-colors border border-black/5 dark:border-white/5 no-underline text-black dark:text-white"
 										href={item.href}
 										onclick={() => (isOpen = false)}
 									>
-										<Ico class="w-6 h-6 opacity-70" name={item.name} />
+										<Ico class="w-6 h-6 invert dark:invert-0 fill-black opacity-80" name={item.name} />
 										<span class="text-xl font-medium">{item.name}</span>
 									</a>
 								{/each}
