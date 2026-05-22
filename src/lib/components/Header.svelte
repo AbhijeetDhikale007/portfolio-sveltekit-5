@@ -54,9 +54,10 @@
 					/>
 				</button>
 				<button
-					class="flex justify-center items-center w-10 h-10 border-none bg-white text-black rounded-xl transition-all hover:invert hover:text-black"
+					class="flex justify-center items-center w-10 h-10 border-none bg-white text-black rounded-md transition-all hover:invert hover:text-black"
 					onclick={() => MenuHandler()}><Ico class="invert" name="Menu" /></button
 				>
+				<!-- Nav Menu Vertical Screens -->
 				{#if isOpen}
 					<div
 						class="fixed inset-0 top-14 bg-white dark:bg-black backdrop-blur-xl z-10 flex flex-col items-center justify-start pt-10"
