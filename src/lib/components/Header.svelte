@@ -25,7 +25,7 @@
 	class="fixed flex justify-center top-0 left-0 w-[100vw] z-4 border-b-[0.1px] border-black/45 dark:border-white/45 bg-white dark:bg-black"
 	in:fly={{ y: -100, duration: 1000 }}
 >
-	<div class="flex items-center justify-between w-[87vw] h-10 lg:h-15">
+	<div class="flex items-center justify-between w-[87vw] h-15">
 		<a
 			href="/"
 			class="flex items-center gap-4 no-underline group rounded-xl border-[0.1px] border-black/35 dark:border-white/35 overflow-hidden"
@@ -36,7 +36,7 @@
 				Λ
 			</div>
 			<span
-				class="tracking-[2px] mr-4 text-black dark:text-white font-Roboto-Condensed text-lg lg:text-xl xl:text-xl transition-opacity group-hover:opacity-100 select-none"
+				class="tracking-[2px] mr-4 text-black dark:text-white font-Roboto-Condensed text-md lg:text-xl xl:text-xl transition-opacity group-hover:opacity-100 select-none"
 			>
 				Λʙʜιנєєτ Ðʜικαℓє
 			</span>
