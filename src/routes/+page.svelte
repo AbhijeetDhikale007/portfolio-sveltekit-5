@@ -16,7 +16,7 @@
 >
 	<div class="flex flex-col items-center justify-center flex-grow w-full px-4 text-center z-10">
 		<h1
-			class="text-5xl md:text-7xl lg:text-8xl font-bold font-Roboto-Condensed mb-4 md:mb-6 text-black dark:text-white transition-colors duration-500 tracking-tighter"
+			class="text-5xl md:text-7xl lg:text-8xl font-bold font-Roboto-Condensed mb-4 md:mb-6 text-black dark:text-white transition-colors duration-500 tracking-tighter selection:bg-purple/45"
 		>
 			Hi, I'm Abhijeet.
 		</h1>
@@ -34,7 +34,7 @@
 
 	<div class="w-full mt-2">
 		<p
-			class="text-center text-xs md:text-sm mb-4 md:mb-4 opacity-80 dark:opacity-50 font-semibold tracking-[0.3em] uppercase text-black dark:text-white transition-colors duration-500"
+			class="text-center text-xs md:text-sm mb-4 md:mb-4 opacity-80 dark:opacity-50 font-semibold tracking-[0.3em] uppercase text-black dark:text-white transition-colors duration-500 selection:bg-purple/45"
 		>
 			My Tech Stack
 		</p>
