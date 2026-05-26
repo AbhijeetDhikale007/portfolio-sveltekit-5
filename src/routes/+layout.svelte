@@ -57,4 +57,4 @@
 </svelte:head>
 
 <Header />
-<main class="overflow-y-hidden">{@render children()}</main>
+<main class="overflow-hidden">{@render children()}</main>
